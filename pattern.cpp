@@ -1012,29 +1012,6 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    Segment_Tree<int> st([](int a, int b){return a+b;}, 0);
-    int n;
-    cin >> n;
-    st.resize(n);
-    while(true){
-        int t;
-        cin >> t;
-        if(t==0)
-            break;
-        if(t==1){
-            int it, k;
-            cin >> it >> k;
-            it--;
-            st.fupd(it, k);
-        }
-        else{
-            int l, r;
-            cin >> l >> r;
-            l--;
-            cout << st.get(l, r) << '\n';
-        }
-        //cout << st << endl;
-    }
 
     return 0;
 }
